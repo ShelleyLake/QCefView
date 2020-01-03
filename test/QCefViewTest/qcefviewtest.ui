@@ -49,6 +49,13 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="pushButtonClose">
+         <property name="text">
+          <string>Close</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLineEdit" name="lineEditUrl"/>
        </item>
        <item>

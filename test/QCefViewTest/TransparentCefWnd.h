@@ -1,18 +1,19 @@
 #ifndef TRANSPARENT_WND_H__
 #define TRANSPARENT_WND_H__
 
-#include <QtWidgets/QMainWindow>
 #include "ui_transparent.h"
+#include <QtWidgets/QMainWindow>
 
 class TransparentCefWnd : public QMainWindow {
     Q_OBJECT
 
   public:
-      TransparentCefWnd(QWidget *parent = 0);
+    TransparentCefWnd(QWidget *parent = 0);
     ~TransparentCefWnd();
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
+
   private:
     Ui::TransparentCefWnd ui;
     bool leftMousePressed_;

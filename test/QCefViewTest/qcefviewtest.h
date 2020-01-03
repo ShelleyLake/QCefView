@@ -1,8 +1,8 @@
 #ifndef QCEFVIEWTEST_H
 #define QCEFVIEWTEST_H
 
-#include <QtWidgets/QMainWindow>
 #include "ui_qcefviewtest.h"
+#include <QtWidgets/QMainWindow>
 
 class QCefViewTest : public QMainWindow {
     Q_OBJECT
@@ -10,6 +10,7 @@ class QCefViewTest : public QMainWindow {
   public:
     QCefViewTest(QWidget *parent = 0);
     ~QCefViewTest();
+
   private:
     Ui::QCefViewTestClass ui;
 };

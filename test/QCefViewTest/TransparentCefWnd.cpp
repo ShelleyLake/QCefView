@@ -1,10 +1,9 @@
 #include "TransparentCefWnd.h"
-#include <QMouseEvent>
 #include <QDebug>
+#include <QMouseEvent>
 
 TransparentCefWnd::TransparentCefWnd(QWidget *parent)
-    : QMainWindow(parent)
-    , leftMousePressed_(false) {
+    : QMainWindow(parent), leftMousePressed_(false) {
     ui.setupUi(this);
     this->setWindowTitle("Transparent CEF");
     this->setFixedWidth(1024);
@@ -15,12 +14,12 @@ TransparentCefWnd::TransparentCefWnd(QWidget *parent)
     setWindowFlags(Qt::FramelessWindowHint);
     setMouseTracking(true);
 
-    ui.widgetCef->navigateToUrl(QCoreApplication::applicationDirPath() + "/tree.html");
+    ui.widgetCef->navigateToUrl(QCoreApplication::applicationDirPath() +
+                                "/tree.html");
     qInfo() << ui.widgetCef->size();
 }
 
 TransparentCefWnd::~TransparentCefWnd() {
-
 }
 
 void TransparentCefWnd::mousePressEvent(QMouseEvent *event) {
